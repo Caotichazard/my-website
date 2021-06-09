@@ -6,7 +6,7 @@ import './fonts.css';
 
 import Landing from './components/landing/landing'
 import About from './components/about_me/about'
-
+import Skills from './components/skills/skills'
 
 class Page extends React.Component{
     render(){
@@ -15,6 +15,7 @@ class Page extends React.Component{
                
                 <Landing/>
                 <About/>
+                <Skills/>
             </div>
         )
     }

@@ -1,0 +1,36 @@
+.skills_div{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F7EBE8;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.skills_grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: center;
+    
+    
+}
+.skill_card{
+    height: 9em;
+    width: 9em;
+    background-color: #444140;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill_icon{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-color: #E1D6D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
