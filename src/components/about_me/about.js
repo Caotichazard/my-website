@@ -1,22 +1,51 @@
 import React from 'react'
 import './about.css'
+
+
+
+
+
+const About_text = ({info}) => {
+    const {info_title,info_p} = info
+    return (
+        <div class='about_text'>
+            <h2>
+                    {info_title}
+                 </h2>
+                <p>
+                    {info_p}
+                </p>
+        </div>
+    )
+}
+
+
+
+
+
+
 const About = () => {
+    var about_me = [
+        {
+            info_title : 'Quem sou eu?',
+            info_p: 'Meu nome é Guilherme Locca Salomão e sou estudante de Ciencia da computação na Universidade Federal de São Carlos (UFSCar), cursando atualmente meu 3° ano. Adoro desafios, enigmas e quebra cabeças, além disso amo poder usar minha criatividade para poder encontrar soluções para esses problemas. Programação para mim é uma forma de continuar fazendo isso e ainda poder sempre me desafiar a fazer algo melhor.'
+        },
+        
+        
+        
+        
+    ]
+    var about_arr = []
+    about_me.forEach(element => {
+        about_arr.push(<About_text info={element}/>)
+    })
     return (
         <div class="about_div">
-            <div class="about_text">
-                <h2>
-                    Quem sou eu?
-                 </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget diam vulputate, commodo ante porta, efficitur nisl. Etiam a commodo orci. Nunc sagittis aliquam varius. Suspendisse potenti. Sed vel ornare mauris. Duis vitae mollis ante, at molestie leo. Mauris ullamcorper turpis in neque maximus, ut viverra lectus ultrices. Suspendisse lacinia hendrerit dictum. Suspendisse varius lacinia leo, sit amet maximus turpis fringilla in. Nunc ornare luctus lorem. Pellentesque a tortor rhoncus, ultricies leo eget, dapibus eros. Etiam ornare imperdiet gravida. Aliquam augue libero, convallis at volutpat scelerisque, mollis quis massa. Nulla et sapien semper, mollis odio tempus, facilisis metus. Pellentesque pulvinar laoreet elementum.
-                </p>
-                <h2>
-                    Meus interesses?
-                 </h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget diam vulputate, commodo ante porta, efficitur nisl. Etiam a commodo orci. Nunc sagittis aliquam varius. Suspendisse potenti. Sed vel ornare mauris. Duis vitae mollis ante, at molestie leo. Mauris ullamcorper turpis in neque maximus, ut viverra lectus ultrices. Suspendisse lacinia hendrerit dictum. Suspendisse varius lacinia leo, sit amet maximus turpis fringilla in. Nunc ornare luctus lorem. Pellentesque a tortor rhoncus, ultricies leo eget, dapibus eros. Etiam ornare imperdiet gravida. Aliquam augue libero, convallis at volutpat scelerisque, mollis quis massa. Nulla et sapien semper, mollis odio tempus, facilisis metus. Pellentesque pulvinar laoreet elementum.
-                </p>
+            <div class="about_grid">
+            {about_arr}
             </div>
+                
+            
 
         </div>
     )

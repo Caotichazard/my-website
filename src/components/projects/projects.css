@@ -1,0 +1,59 @@
+.projects_div{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #F7EBE8;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.project_card{
+    background-color: #313032;
+    min-height: 9.5rem;
+    min-width: 9rem;
+    max-width: 12rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-flow: column;
+    padding: 0.5rem;
+}
+.projects_grid{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    
+    max-height: 60vh;
+    max-width: 90vw;
+    
+}
+
+.project_icon{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: #E7DCD9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.project_card span{
+    
+    color: white;
+    margin: 0.5rem;
+}
+@media (min-width: 1024px) {
+    .project_card span{
+        font-size: 1.25rem;
+    }
+    
+}
+a, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
