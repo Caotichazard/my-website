@@ -1,6 +1,6 @@
 import React from 'react'
 import './skills.css'
-
+import {LanguageContext} from "../../language"
 import { DiReact,DiGit,DiJavascript,DiPython,DiMysql,DiMarkdown,DiLinux,DiHtml5,DiCss3,DiJava } from "react-icons/di";
 import {SiFlutter,SiC,SiCplusplus,SiDart,SiFlask,SiSpring} from "react-icons/si"
 import {MdLanguage} from "react-icons/md"
@@ -23,6 +23,17 @@ const Skill_card = ({skill}) => {
 
 
 const Skills = () => {
+    const lang_text = [
+        {
+            'BR': "Português Brasileiro nativo",
+            'US' : "Native Brazillian Portuguese",
+        },
+        {
+        'BR': "Inglês avançado",
+        'US' : "Advanced English",
+        }
+    ]
+    const { language, setLanguage } = React.useContext(LanguageContext);
     var skills_icons = [
         {
             skill_icon : <DiReact size='5rem'/>,
@@ -90,7 +101,11 @@ const Skills = () => {
         },
         {
             skill_icon : <MdLanguage size='4rem'/>,
-            skill_name: 'Inglês Avançado'
+            skill_name: lang_text[0][language]
+        },
+        {
+            skill_icon : <MdLanguage size='4rem'/>,
+            skill_name: lang_text[1][language]
         },
         
         
@@ -101,9 +116,13 @@ const Skills = () => {
         skills_arr.push(<Skill_card skill={element}/>)
     })
 
+    const text = {
+        "BR" : 'Minhas habilidades:',
+        "US" : 'My skills:'
+    }
     return (
         <div class="skills_div">
-            <h2>Minhas habilidades</h2>
+            <h2>{text[language]}</h2>
             <br></br>
             <div class='skills_grid'>
                 {

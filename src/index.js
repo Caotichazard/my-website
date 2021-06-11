@@ -9,27 +9,50 @@ import About from './components/about_me/about'
 import Skills from './components/skills/skills'
 import Projects from './components/projects/projects'
 import Contact from './components/contact/contact'
-
+import LanguageSelect from './components/language_select/language_select'
 import { Helmet } from 'react-helmet';
 
-class Page extends React.Component{
-    render(){
-        return (
+
+import {LanguageContext} from './language'
+
+export const Body = () => {
+    const [language, setLanguage] = React.useState("BR");
+    const value = { language, setLanguage };
+    return (
+        <LanguageContext.Provider value={value}>
+        <div>
+            <LanguageSelect/>
+        
             <div>
-            <Helmet>
-                <title>Guilherme Salomão</title>
-            </Helmet>
-            <div>
-               
+            
                 <Landing/>
                 <About/>
                 <Skills/>
                 <Projects/>
                 <Contact/>
             </div>
-            </div>
-        )
-    }
+        </div>
+        </LanguageContext.Provider>
+    )
+}
+
+
+
+
+
+export const Page = () => {
+
+    
+
+    return (
+        <div>
+        <Helmet>
+            <title>Guilherme Salomão</title>
+        </Helmet>
+        
+        <Body/>
+        </div>
+    )
 }
 
 ReactDOM.render(

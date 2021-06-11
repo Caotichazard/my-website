@@ -1,16 +1,28 @@
 import React from 'react';
 import './landing.css';
-
+import {LanguageContext} from "../../language"
 
 const Landing = () => {
+    const { language, setLanguage } = React.useContext(LanguageContext);
+    const phrases = {
+        "BR":{
+            hello : 'Olá {visitante.nome}',
+            iam: 'Eu sou Guilherme',
+        },
+        "US":{
+            hello : 'Hello {visitor.name}',
+            iam: 'I am Guilherme',
+        }
+    }
+    
     return (
         <div class='landing_div'>
             <div class='landing_text'>
             <h1>
-                Olá {'{' + 'vistante.nome' + '}'}
+                {phrases[language].hello}
             </h1>
             <h2>
-                Eu sou Guilherme
+                {phrases[language].iam}
             </h2>
             </div>
 
