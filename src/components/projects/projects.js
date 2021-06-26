@@ -5,7 +5,7 @@ import {LanguageContext} from "../../language"
 
 
 
-const Project_card = ({projects}) => {
+const ProjectCard = ({projects}) => {
     const {project_icon,project_info,project_link} = projects
     return (
         <a href={project_link}>
@@ -26,7 +26,7 @@ const Project_card = ({projects}) => {
 
 
 const Projects = () => {
-    const { language, setLanguage } = React.useContext(LanguageContext);
+    const { language } = React.useContext(LanguageContext);
     var projects = {
         "BR":[
             {
@@ -55,7 +55,7 @@ const Projects = () => {
     }
     var projects_arr = []
     projects[language].forEach(element => {
-        projects_arr.push(<Project_card projects={element}/>)
+        projects_arr.push(<ProjectCard projects={element}/>)
     })
     const text = {
         "BR" : "Meus projetos:",

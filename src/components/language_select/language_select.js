@@ -13,8 +13,10 @@ export const LanguageSelect = () => {
     
     const { language, setLanguage } = React.useContext(LanguageContext);
     const Lang_opt = []
+    
+    
     Object.keys(flags).forEach((element)=>{
-        if(element != language){
+        if(element !== language){
             Lang_opt.push(flags[element])
         }
     })

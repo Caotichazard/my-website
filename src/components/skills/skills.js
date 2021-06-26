@@ -5,7 +5,7 @@ import { DiReact,DiGit,DiJavascript,DiPython,DiMysql,DiMarkdown,DiLinux,DiHtml5,
 import {SiFlutter,SiC,SiCplusplus,SiDart,SiFlask,SiSpring} from "react-icons/si"
 import {MdLanguage} from "react-icons/md"
 
-const Skill_card = ({skill}) => {
+const SkillCard = ({skill}) => {
     const {skill_icon,skill_name} = skill
     return (
         <div class='skill_card'>
@@ -33,7 +33,7 @@ const Skills = () => {
         'US' : "Advanced English",
         }
     ]
-    const { language, setLanguage } = React.useContext(LanguageContext);
+    const { language } = React.useContext(LanguageContext);
     var skills_icons = [
         {
             skill_icon : <DiReact size='5rem'/>,
@@ -113,7 +113,7 @@ const Skills = () => {
     ]
     var skills_arr = []
     skills_icons.forEach(element => {
-        skills_arr.push(<Skill_card skill={element}/>)
+        skills_arr.push(<SkillCard skill={element}/>)
     })
 
     const text = {

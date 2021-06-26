@@ -5,7 +5,7 @@ import {LanguageContext} from "../../language"
 
 
 
-const About_text = ({info}) => {
+const AboutText = ({info}) => {
     const {info_title,info_p} = info
     return (
         <div class='about_text'>
@@ -25,7 +25,7 @@ const About_text = ({info}) => {
 
 
 const About = () => {
-    const { language, setLanguage } = React.useContext(LanguageContext);
+    const { language } = React.useContext(LanguageContext);
     var about_me = {
         "BR":[
             {
@@ -43,7 +43,7 @@ const About = () => {
     }
     var about_arr = []
     about_me[language].forEach(element => {
-        about_arr.push(<About_text info={element}/>)
+        about_arr.push(<AboutText info={element}/>)
     })
     return (
         <div class="about_div">

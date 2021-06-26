@@ -3,7 +3,7 @@ import './landing.css';
 import {LanguageContext} from "../../language"
 
 const Landing = () => {
-    const { language, setLanguage } = React.useContext(LanguageContext);
+    const { language } = React.useContext(LanguageContext);
     const phrases = {
         "BR":{
             hello : 'Olá {visitante.nome}',

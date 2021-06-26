@@ -1,10 +1,10 @@
 import React from 'react'
 import './contact.css'
 import {LanguageContext} from "../../language"
-import {SiWhatsapp,SiTelegram,SiLinkedin,SiGithub,SiGmail} from "react-icons/si"
+import {SiTelegram,SiLinkedin,SiGithub,SiGmail} from "react-icons/si"
 import {AiOutlineFileText} from "react-icons/ai"
 
-const Contact_card = ({contacts}) => {
+const ContactCard = ({contacts}) => {
     const {contact_icon,contact_name,contact_link} = contacts
     return (
         <a href={contact_link}>
@@ -21,7 +21,7 @@ const Contact_card = ({contacts}) => {
 }
 
 const Contact = () => {
-    const { language, setLanguage } = React.useContext(LanguageContext);
+    const { language } = React.useContext(LanguageContext);
     const lang_text ={
         "BR": "Currículo",
         "US": "CV",
@@ -59,7 +59,7 @@ const Contact = () => {
     ]
     var contacts_arr = []
     contacts.forEach(element => {
-        contacts_arr.push(<Contact_card contacts={element}/>)
+        contacts_arr.push(<ContactCard contacts={element}/>)
     })
     const text = {
         "BR" : 'Entre em contato:',
