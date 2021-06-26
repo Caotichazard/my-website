@@ -28,11 +28,6 @@ const Contact = () => {
     }
     var contacts = [
         {
-            contact_icon : <SiWhatsapp size='5rem'/>,
-            contact_name: 'Whatsapp',
-            contact_link: 'https://api.whatsapp.com/send/?phone=5571999010744&text=Ol%C3%A1,%20Guilherme!',
-        },
-        {
             contact_icon : <SiTelegram size='5rem'/>,
             contact_name: 'Telegram',
             contact_link: 'https://t.me/guisalomao',
