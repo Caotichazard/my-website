@@ -26,7 +26,8 @@ const Contact = () => {
         "BR": "Currículo",
         "US": "CV",
     }
-    var contacts = [
+    var contacts = {
+        "BR":[
         {
             contact_icon : <SiTelegram size='5rem'/>,
             contact_name: 'Telegram',
@@ -45,7 +46,38 @@ const Contact = () => {
         {
             contact_icon : <AiOutlineFileText size='5rem'/>,
             contact_name: lang_text[language],
-            contact_link: 'https://drive.google.com/file/d/1S7ROcQuoZ4nWh3c9E1pQk8j8DMrku4zl/view?usp=sharing',
+            contact_link: 'https://drive.google.com/file/d/1cbOJ7XaBM8Hmz3YXA_rCuK1KzjmN1CZ3/view?usp=sharing',
+        },
+        {
+            contact_icon : <SiGmail size='5rem'/>,
+            contact_name: 'Gmail',
+            contact_link: 'mailto:guilsalomao@gmail.com',
+        },
+        
+        
+        
+        
+    ],
+    "US":[
+        {
+            contact_icon : <SiTelegram size='5rem'/>,
+            contact_name: 'Telegram',
+            contact_link: 'https://t.me/guisalomao',
+        },
+        {
+            contact_icon : <SiLinkedin size='5rem'/>,
+            contact_name: 'Linkedin',
+            contact_link: 'https://www.linkedin.com/in/guilherme-salomao/',
+        },
+        {
+            contact_icon : <SiGithub size='5rem'/>,
+            contact_name: 'Github',
+            contact_link: 'https://github.com/Caotichazard',
+        },
+        {
+            contact_icon : <AiOutlineFileText size='5rem'/>,
+            contact_name: lang_text[language],
+            contact_link: 'https://drive.google.com/file/d/1rsDQ4i8857JoSPVwmz3Xoqzn1KzWTBs4/view?usp=sharing',
         },
         {
             contact_icon : <SiGmail size='5rem'/>,
@@ -57,8 +89,9 @@ const Contact = () => {
         
         
     ]
+}
     var contacts_arr = []
-    contacts.forEach(element => {
+    contacts[language].forEach(element => {
         contacts_arr.push(<ContactCard contacts={element}/>)
     })
     const text = {
