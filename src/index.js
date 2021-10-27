@@ -10,6 +10,7 @@ import Skills from './components/skills/skills'
 import Projects from './components/projects/projects'
 import Contact from './components/contact/contact'
 import LanguageSelect from './components/language_select/language_select'
+import ProfXp from './components/professional_xp/professional_xp';
 import { Helmet } from 'react-helmet';
 
 
@@ -28,6 +29,7 @@ export const Body = () => {
                 <Landing/>
                 <About/>
                 <Skills/>
+                <ProfXp/>
                 <Projects/>
                 <Contact/>
             </div>

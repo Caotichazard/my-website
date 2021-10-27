@@ -1,8 +1,8 @@
 import React from 'react'
 import './skills.css'
 import {LanguageContext} from "../../language"
-import { DiReact,DiGit,DiJavascript,DiPython,DiMysql,DiMarkdown,DiLinux,DiHtml5,DiCss3,DiJava } from "react-icons/di";
-import {SiFlutter,SiC,SiCplusplus,SiDart,SiFlask,SiSpring} from "react-icons/si"
+import { DiReact,DiGit,DiJavascript,DiPython,DiMysql,DiMarkdown,DiLinux,DiHtml5,DiCss3,DiJava, DiAngularSimple, DiNodejs } from "react-icons/di";
+import {SiFlutter,SiC,SiCplusplus,SiDart,SiFlask,SiSpring, SiKotlin, SiAndroid, SiBootstrap, SiPostgresql} from "react-icons/si"
 import {MdLanguage} from "react-icons/md"
 
 const SkillCard = ({skill}) => {
@@ -98,6 +98,30 @@ const Skills = () => {
         {
             skill_icon : <SiDart size='4rem'/>,
             skill_name: 'Dart'
+        },
+        {
+            skill_icon : <DiAngularSimple size='4rem'/>,
+            skill_name: 'Angular'
+        },
+        {
+            skill_icon : <DiNodejs size='5rem'/>,
+            skill_name: 'NodeJs'
+        },
+        {
+            skill_icon : <SiKotlin size='4rem'/>,
+            skill_name: 'Kotlin'
+        },
+        {
+            skill_icon : <SiAndroid size='4rem'/>,
+            skill_name: 'Android'
+        },
+        {
+            skill_icon : <SiBootstrap size='4rem'/>,
+            skill_name: 'Bootstrap'
+        },
+        {
+            skill_icon : <SiPostgresql size='4rem'/>,
+            skill_name: 'Postgresql'
         },
         {
             skill_icon : <MdLanguage size='4rem'/>,
